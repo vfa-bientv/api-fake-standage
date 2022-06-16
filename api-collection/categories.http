@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:5000/api
+@resourceName = categories
+#Categories
+
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+###
+# @name getId
+GET {{baseUrl}}/{{resourceName}}/be67e548-2c54-4380-8366-44576e858c08
+###
+###
+# @name filter
+GET {{baseUrl}}/{{resourceName}}?name=Books
+###
+###
+# @name addNew
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "name":"Test thu"
+}
+###
+
+###
+# @name edit
+PATCH {{baseUrl}}/{{resourceName}}/HycS1IV
+Content-Type: application/json
+
+{
+    "name":"New laptop",
+    "searchTerm": "new laptop"
+}
+###
+
+###
+# @name remove
+DELETE {{baseUrl}}/{{resourceName}}/HycS1IV
+###

@@ -1,0 +1,48 @@
+@baseUrl=http://localhost:5000/api
+@resourceName=cities
+#Products
+
+###
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+###
+
+###
+# @name pagination
+GET {{baseUrl}}/{{resourceName}}?_page=1&_limit=3
+###
+
+###
+# @name filter
+GET {{baseUrl}}/{{resourceName}}?color=purple
+###
+
+###
+# @name addNew
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "categoryId": "a811be15-2b5d-4e08-b15d-b7d84efb35dd",
+    "name": "Laptop dell",
+    "color": "plum",
+    "price": "106.00",
+    "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+    "thumbnailUrl": "http://placeimg.com/400/400"
+}
+###
+
+###
+# @name edit
+PATCH {{baseUrl}}/{{resourceName}}/Ou0nozw
+Content-Type: application/json
+
+{
+    "name":"New laptop"
+}
+###
+
+###
+# @name remove
+DELETE {{baseUrl}}/{{resourceName}}/HycS1IV
+###
