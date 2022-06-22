@@ -3,7 +3,7 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const queryString = require('query-string');
 const middlewares = jsonServer.defaults();
-server.listen(3000,'0.0.0.0', () => {
+server.listen(5000,'0.0.0.0', () => {
   console.log('JSON Server is running');
 });
 // Set default middlewares (logger, static, cors and no-cache)
