@@ -50,6 +50,6 @@ router.render = (req, res) => {
 };
 // Use default router
 server.use('/api', router);
-server.listen(5000, () => {
+server.listen(5004, () => {
   console.log('JSON Server is running');
 });
