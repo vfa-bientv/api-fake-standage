@@ -4,7 +4,7 @@ const router = jsonServer.router('db.json');
 const queryString = require('query-string');
 const middlewares = jsonServer.defaults();
 server.listen(5000,'0.0.0.0', () => {
-  console.log('JSON Server is running');
+  console.log("Express server listening on port %d in %s mode", server.address().port, server.settings.env);
 });
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
