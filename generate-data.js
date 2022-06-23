@@ -2,7 +2,7 @@ const { log } = require('console');
 const { create } = require('domain');
 const faker = require('faker');
 const fs = require('fs');
-faker.locale = 'vi';
+faker.locale = 'ja';
 
 // Random data
 // console.log(faker.commerce.department());
